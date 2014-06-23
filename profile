@@ -12,3 +12,4 @@ alias clera='clear'
 alias claer='clear'
 alias clare='clear'
 alias make='clear && make'
+alias q=exit
