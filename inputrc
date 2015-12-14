@@ -1,0 +1,12 @@
+set bell-style none
+set editing-mode vi
+C-L: clear-screen
+C-l: clear-screen
+$if mode=vi
+  set keymap vi-command
+  "gg": end-of-history
+  "G": beginning-of-history
+  set keymap vi-insert
+  "jj": vi-movement-mode
+$endif
+set print-completions-horizontally on

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+USER=$1
+DIR=/home/$USER
+
+cp bash_aliases $DIR/.bash_aliases
+
+cp vimrc $DIR/.vimrc
+
+mv $DIR/.bashrc $DIR/.bashrc.old
+
+cat profile > .bashrc
+cat $DIR/.bashrc.old >> .bashrc
