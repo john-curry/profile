@@ -1,6 +1,13 @@
 #!/bin/bash
 
-USER=$1
+if [ -z $1 ]; then
+  echo "Username not supplied, defaulting to bigboss."
+  User=bigboss
+else
+  echo "Installing userfiles for user $1."
+  USER=$1
+fi
+
 DIR=/home/$USER
 
 cp bash_aliases $DIR/.bash_aliases
@@ -9,5 +16,5 @@ cp vimrc $DIR/.vimrc
 
 mv $DIR/.bashrc $DIR/.bashrc.old
 
-cat profile > .bashrc
-cat $DIR/.bashrc.old >> .bashrc
+cat profile > $DIR/.bashrc
+cat $DIR/.bashrc.old >> $DIR/.bashrc
