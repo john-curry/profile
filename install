@@ -1,14 +1,14 @@
 #!/bin/bash
 
 if [ -z $1 ]; then
-  echo "Username not supplied, defaulting to bigboss."
-  User=bigboss
+  echo "Username not supplied, defaulting to $USER."
+  MUSER=bigboss
 else
   echo "Installing userfiles for user $1."
-  USER=$1
+  MUSER=$1
 fi
 
-DIR=/home/$USER
+DIR=/home/$MUSER
 
 cp bash_aliases $DIR/.bash_aliases
 
