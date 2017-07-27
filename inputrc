@@ -10,3 +10,4 @@ $if mode=vi
   "jj": vi-movement-mode
 $endif
 set print-completions-horizontally on
+set completion-ignore-case On
