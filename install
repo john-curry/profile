@@ -1,20 +1,5 @@
 #!/bin/bash
-
-if [ -z $1 ]; then
-  echo "Username not supplied, defaulting to $USER."
-  MUSER=bigboss
-else
-  echo "Installing userfiles for user $1."
-  MUSER=$1
-fi
-
-DIR=/home/$MUSER
-
-cp bash_aliases $DIR/.bash_aliases
-
-cp vimrc $DIR/.vimrc
-
-mv $DIR/.bashrc $DIR/.bashrc.old
-
-cat profile > $DIR/.bashrc
-cat $DIR/.bashrc.old >> $DIR/.bashrc
+cp profile/bash_aliases .bash_aliases
+cp profile/vimrc        .vimrc
+cp profile/inputrc      .inputrc
+cp profile/screenrc     .screenrc
