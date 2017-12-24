@@ -3,3 +3,6 @@ cp profile/bash_aliases .bash_aliases
 cp profile/vimrc        .vimrc
 cp profile/inputrc      .inputrc
 cp profile/screenrc     .screenrc
+cp profile/bash_exports .bash_exports
+
+cat profile/profile >> .bashrc

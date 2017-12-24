@@ -1,3 +1,3 @@
-set -o vi
-export VIMRC="/home/bigboss/.vimrc"
-export EDITOR=vim
+if [ -f ~/.bash_exports ]; then
+    . ~/.bash_exports
+fi
