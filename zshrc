@@ -110,8 +110,7 @@ alias gettoken='gittoken | clip'
 alias icat="kitty +kitten icat"
 
 
-if [ -e /home/johnc/.nix-profile/etc/profile.d/nix.sh ]; then . /home/johnc/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
-if [ -e ~/src/repos/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh ]; then source ~/src/repos/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh
-
+if [ -e $HOME/.nix-profile/etc/profile.d/nix.sh ]; then . $HOME/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+if [ -e $HOME/src/repos/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh ]; then source $HOME/src/repos/fzf-zsh-completions/fzf-zsh-completions.plugin.zsh; fi
 xset r rate 400 25
 # vim: set ft=zsh :
