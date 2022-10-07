@@ -1,8 +1,26 @@
 #!/bin/bash
-cp profile/bash_aliases .bash_aliases
-cp profile/vimrc        .vimrc
-cp profile/inputrc      .inputrc
-cp profile/screenrc     .screenrc
-cp profile/bash_exports .bash_exports
+cp profile/bash_aliases ~/.bash_aliases
+cp profile/vimrc        ~/.vimrc
+cp profile/inputrc      ~/.inputrc
+cp profile/screenrc     ~/.screenrc
+cp profile/bash_exports ~/.bash_exports
+cp profile/bash_exports ~/.bash_exports
+cp profile/zshrc        ~/.zshrc
 
-cat profile/profile >> .bashrc
+cat profile/profile >> ~/.bashrc
+
+apt install curl git screen ssh -y
+
+curl -L https://sw.kovidgoyal.net/kitty/installer.sh | sh /dev/stdin
+mkdir -p ~/.config
+cp profile/kitty ~/.config/
+
+mkdir -p ~/.repos
+cd ~/.repos
+git clone https://www.github.com/john-curry/nvim-configs.git
+cp -r nvim-configs ~/.config/nvim
+
+apt-get install -y ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
+git clone https://github.com/neovim/neovim
+cd neovim && make CMAKE_BUILD_TYPE=RelWithDebInfo
+make install
